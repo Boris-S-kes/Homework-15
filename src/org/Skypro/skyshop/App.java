@@ -1,7 +1,7 @@
-package org.Skypro.Skyshop;
+package org.Skypro.skyshop;
 
-import org.Skypro.Skyshop.basket.ProductBasket;
-import  org.Skypro.Skyshop.product.Product;
+import org.Skypro.skyshop.basket.ProductBasket;
+import org.Skypro.skyshop.product.Product;
 
 public class App {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class App {
         Product p3 = new Product("чай",250);
         Product p4 = new Product("фрукты",600);
         Product p5 = new Product("молоко",48);
-        Product p6 = new Product("шоколад",99);
+        Product p6 = new Product("шоколад",98);
 
         basket.addProducts(p1);
 
@@ -32,3 +32,4 @@ public class App {
 
     }
 }
+
