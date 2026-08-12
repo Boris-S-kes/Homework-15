@@ -1,32 +1,36 @@
-package org.Skypro.skyshop;
+package org.Skypro.Skyshop;
 
-import org.Skypro.skyshop.basket.ProductBasket;
-import org.Skypro.skyshop.product.Product;
+import org.Skypro.Skyshop.product.Product;
+import org.Skypro.Skyshop.basket.ProductBasket;
+import org.Skypro.Skyshop.product.SimpleProduct;
+import org.Skypro.Skyshop.product.FixPriceProduct;
+import org.Skypro.Skyshop.product.DiscountedProduct;
 
 public class App {
     public static void main(String[] args) {
         ProductBasket basket = new ProductBasket();
-        Product p1 = new Product("булка",120);
-        Product p2 = new Product("кофе",320);
-        Product p3 = new Product("чай",250);
-        Product p4 = new Product("фрукты",600);
-        Product p5 = new Product("молоко",48);
-        Product p6 = new Product("шоколад",98);
+        Product milk = new SimpleProduct("молоко",50);
+        Product coffee = new DiscountedProduct("кофе",350,11);
+        Product meat = new FixPriceProduct("мясо с фиксированной ценой");
+        Product cookie = new SimpleProduct("печенье",369);
+        Product sugar = new DiscountedProduct("Сахар",55,20);
+        Product stew = new DiscountedProduct("тушенка",180,30);
 
-        basket.addProducts(p1);
+        basket.addProducts(sugar);
 
 
-        basket.addProducts(p2);
-        basket.addProducts(p3);
-        basket.addProducts(p4);
-        basket.addProducts(p5);
-        basket.addProducts(p6);
+
+        basket.addProducts(meat);
+        basket.addProducts(milk);
+        basket.addProducts(coffee);
+        basket.addProducts(cookie);
+        basket.addProducts(stew);
 
         basket.printBasketContent();
 
         System.out.println("сумма корзины:"+ basket.getTotalPrice());
-        System.out.println("есть ли чай?" + basket.isProductBasketName("чай"));
-        System.out.println(" есть ШОКОЛАД" + basket.isProductBasketName("шоколад"));
+        System.out.println("есть в продаже печенье?" + basket.isProductBasketName("печенье"));
+        System.out.println(" есть в продаже кофе ?" + basket.isProductBasketName("кофе"));
         basket.clear();
         basket.printBasketContent();
 
