@@ -1,5 +1,6 @@
 package org.Skypro.Skyshop.product;
 
+
 public abstract class Product {
      private final String name;
 
@@ -19,5 +20,6 @@ public abstract class Product {
     @Override
     public abstract String toString();
 }
+
 
 

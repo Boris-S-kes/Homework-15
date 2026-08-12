@@ -1,5 +1,6 @@
 package org.Skypro.Skyshop.product;
 
+
 public class SimpleProduct extends Product {
     private final int price;
 

@@ -1,5 +1,6 @@
 package org.Skypro.Skyshop;
 
+
 import org.Skypro.Skyshop.product.Product;
 import org.Skypro.Skyshop.basket.ProductBasket;
 import org.Skypro.Skyshop.product.SimpleProduct;
@@ -33,7 +34,6 @@ public class App {
         System.out.println(" есть в продаже кофе ?" + basket.isProductBasketName("кофе"));
         basket.clear();
         basket.printBasketContent();
-
     }
 }
 

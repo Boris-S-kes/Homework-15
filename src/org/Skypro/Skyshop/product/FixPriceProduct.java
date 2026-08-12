@@ -1,5 +1,6 @@
 package org.Skypro.Skyshop.product;
 
+
 public class FixPriceProduct extends Product{
     private static final int fixPrice1 = 888;
 
